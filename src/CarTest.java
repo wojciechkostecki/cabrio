@@ -1,11 +1,9 @@
 public class CarTest {
     public static void main(String[] args) {
-        Cabrio cabrio = new Cabrio();
-        cabrio.brand = "BMW";
-        cabrio.model = "M850i";
-        cabrio.carIsMoving = true;
-        cabrio.openRoof = false;
+        Cabrio.brand = "BMW";
+        Cabrio.model = "M850i";
+        Cabrio.isRoofOpen = true;
 
-        Cabrio.openingOrClosingTheRoof(false, false);
+        Cabrio.toggleRoof(false);
     }
 }

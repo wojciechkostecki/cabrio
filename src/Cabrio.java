@@ -1,17 +1,16 @@
 public class Cabrio {
-    String model;
-    String brand;
-    boolean carIsMoving;
-    boolean openRoof;
+    public static String model;
+    public static String brand;
+    public static boolean isRoofOpen;
 
-    public static void openingOrClosingTheRoof(boolean carIsMoving, boolean openRoof) {
-        if (carIsMoving) {
-            System.out.println("Nie można otworzyć, ani zamknąć dachu w trakcie jazdy");
-        } else if (openRoof) {
-            openRoof = false;
+    public static void toggleRoof(boolean isCarMoving) {
+        if (isCarMoving) {
+            System.out.println("Nie można otworzyć/zamknąć dachu");
+        } else if (isRoofOpen) {
+            isRoofOpen = false;
             System.out.println("zamknięto dach");
         } else {
-            openRoof = true;
+            isRoofOpen = true;
             System.out.println("otworzono dach");
         }
     }
