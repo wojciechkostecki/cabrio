@@ -43,12 +43,12 @@ public class Cabrio {
         isCarMoving = carMoving;
     }
 
-    public static void toggleRoof(Cabrio cabrio) {
-        if (cabrio.isCarMoving) {
+    public void toggleRoof() {
+        if (isCarMoving) {
             System.out.println("Nie można otworzyć/zamknąć dachu");
         } else {
-            cabrio.isRoofOpen = !cabrio.isRoofOpen;
-            System.out.println(cabrio.isRoofOpen ? "otworzono" : "zamknięto");
+            isRoofOpen = !isRoofOpen;
+            System.out.println(isRoofOpen ? "otworzono" : "zamknięto");
         }
     }
 }
